@@ -1,0 +1,9 @@
+#!name=Fix VVebo
+#!desc=修复 VVebo 用户主页/用户时间线无法打开的问题
+#!author=suiyuran, byheaven0912, codex
+
+[Script]
+fix-vvebo-user-timeline = type=http-response,script-path=https://x0.at/rGqX.js,pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\?,requires-body=1,timeout=20
+
+[MITM]
+hostname = %APPEND% api.weibo.cn
